@@ -349,16 +349,150 @@ section {
   border: 1px solid var(--border);
   padding: 32px;
   border-radius: 12px;
-  display: flex;
-  gap: 28px;
   transition: all 0.3s ease;
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }
 
 .competition-item:hover {
   background: rgba(248,245,240,0.05);
   border-color: var(--accent);
   transform: translateY(-4px);
+}
+
+.comp-front,
+.comp-back {
+  padding: 0;
+}
+
+.comp-back {
+  display: none;
+}
+
+.competition-item:hover .comp-front {
+  display: none;
+}
+
+.competition-item:hover .comp-back {
+  display: block;
+}
+
+.comp-back h4 {
+  color: var(--accent);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.comp-back ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comp-back li {
+  margin-bottom: 11px;
+  padding-left: 20px;
+  position: relative;
+  font-size: 14px;
+  color: var(--gray-light);
+  line-height: 1.7;
+}
+
+.comp-back li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Initiatives Grid */
+.initiatives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 32px;
+}
+
+.initiative-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 36px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.initiative-card:hover {
+  background: rgba(248,245,240,0.05);
+  border-color: var(--accent);
+  transform: translateY(-6px);
+}
+
+.initiative-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.initiative-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+
+.initiative-badge {
+  display: inline-block;
+  background: rgba(232, 64, 12, 0.15);
+  color: var(--accent);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.initiative-card p {
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.initiative-stats {
+  font-size: 13px;
+  color: var(--gray-light);
+  margin-bottom: 16px;
+  display: flex;
+  gap: 20px;
+}
+
+.initiative-stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.initiative-cta {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.initiative-card:hover .initiative-cta {
+  color: var(--white);
 }
 
 .comp-badge {
@@ -719,5 +853,13 @@ footer {
 
   .contribution-item {
     padding: 20px;
+  }
+
+  .initiatives-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .initiative-card {
+    padding: 28px;
   }
 }
