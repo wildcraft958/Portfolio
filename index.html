@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animesh Raj - AI/ML Engineer, IIT Kharagpur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Animesh Raj</h1>
+        <div class="subtitle">AI/ML Engineer at IIT Kharagpur</div>
+        <p>Building production-grade AI systems for geospatial intelligence, voice AI, real-time analytics, and medical automation. Inter IIT Gold Medal winner. Currently researching hallucination-resistant agentic systems for healthcare.</p>
+        <div class="highlights">
+          <div class="highlight-item">CGPA 8.54/10</div>
+          <div class="highlight-item">Inter IIT Gold Medal</div>
+          <div class="highlight-item">KDSH 2026 Winner</div>
+        </div>
+        <div class="hero-links">
+          <a href="#experience" class="btn btn-primary">Experience</a>
+          <a href="#projects" class="btn btn-secondary">Projects</a>
+          <a href="https://github.com/wildcraft958" class="btn btn-secondary">GitHub</a>
+          <a href="https://linkedin.com/in/animeshrj958" class="btn btn-secondary">LinkedIn</a>
+          <a href="Animesh_OffCampus_8.54.pdf" class="btn btn-secondary">CV</a>
+        </div>
+      </div>
+      <img src="WhatsApp Image 2025-06-19 at 10.22.17 PM.jpeg" alt="Animesh Raj" class="profile-image" onerror="this.style.display='none'">
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="internships-grid">
+        <!-- Suzuki R&D -->
+        <div class="card" data-details='{"title": "Incoming R&D Intern at Suzuki", "details": ["<h4>Role Overview</h4><ul><li>Incoming R&D Intern at Suzuki R&D Center India</li><li>Focus on AI/ML research and development</li><li>Working on advanced automotive AI systems</li></ul>"]}'>
+          <div class="card-company">🏢 Suzuki R&D Center</div>
+          <h3>R&D Intern</h3>
+          <p class="card-date">Incoming (2026)</p>
+          <p><strong>Advanced AI Research for Automotive</strong></p>
+          <div class="card-list">
+            <div class="card-item">AI/ML research and development</div>
+            <div class="card-item">Automotive systems optimization</div>
+            <div class="card-item">Production-grade implementation</div>
+          </div>
+        </div>
+
+        <!-- Inter IIT GeoNLI -->
+        <div class="card" onclick="openModal('isro-geomli')" style="cursor: pointer;">
+          <div class="card-company">🎖️ Inter IIT Tech Meet 14.0</div>
+          <h3>Applied AI Research Engineer</h3>
+          <p class="card-date">Nov 2025 - Dec 2025</p>
+          <p><strong>ISRO GeoNLI Challenge, Gold Medal Winner</strong></p>
+          <div class="card-list">
+            <div class="card-item">2-3x latency reduction via vLLM</div>
+            <div class="card-item">87% VQA accuracy on VRSBench</div>
+            <div class="card-item">0.73 mIoU with SAM3 grounding</div>
+            <div class="card-item">95% GPU utilization</div>
+          </div>
+        </div>
+
+        <!-- Stealth Startup -->
+        <div class="card" onclick="openModal('stealth-startup')" style="cursor: pointer;">
+          <div class="card-company">🚀 Stealth AI Startup</div>
+          <h3>Software Engineer (R&D)</h3>
+          <p class="card-date">Oct 2025 - Nov 2025</p>
+          <p><strong>Voice AI Observability Platform</strong></p>
+          <div class="card-list">
+            <div class="card-item">Graph-based QA engine</div>
+            <div class="card-item">65% QA cycle reduction</div>
+            <div class="card-item">Tier-1 enterprise deployment</div>
+            <div class="card-item">$1B+ client valuations</div>
+          </div>
+        </div>
+
+        <!-- Convosight -->
+        <div class="card" onclick="openModal('convosight')" style="cursor: pointer;">
+          <div class="card-company">📊 Convosight Analytics</div>
+          <h3>Software Engineering Intern</h3>
+          <p class="card-date">Aug 2025 - Oct 2025</p>
+          <p><strong>AI-Powered Consumer Insights</strong></p>
+          <div class="card-list">
+            <div class="card-item">React/Supabase migration</div>
+            <div class="card-item">38% cost reduction, 50% load time</div>
+            <div class="card-item">92% sentiment accuracy NLP</div>
+            <div class="card-item">70% automation gains</div>
+          </div>
+        </div>
+
+        <!-- Google Student Ambassador -->
+        <div class="card" onclick="openModal('google-ambassador')" style="cursor: pointer;">
+          <div class="card-company">🌐 Google</div>
+          <h3>Student Ambassador</h3>
+          <p class="card-date">Sep 2025 - Dec 2025</p>
+          <p><strong>AI & Gemini Ambassador</strong></p>
+          <div class="card-list">
+            <div class="card-item">Leading AI awareness on campus</div>
+            <div class="card-item">Organizing workshops & demos</div>
+            <div class="card-item">Community engagement</div>
+            <div class="card-item">Google partnership bridge</div>
+          </div>
+        </div>
+
+        <!-- Aristhrottle -->
+        <div class="card" onclick="openModal('aristhrottle')" style="cursor: pointer;">
+          <div class="card-company">🎨 Aristhrottle</div>
+          <h3>AI/ML Engineer</h3>
+          <p class="card-date">Jun 2024 - Jul 2024</p>
+          <p><strong>Automated Story Generation Pipeline</strong></p>
+          <div class="card-list">
+            <div class="card-item">LangGraph orchestration</div>
+            <div class="card-item">Google Imagen3 integration</div>
+            <div class="card-item">25% diversity boost</div>
+            <div class="card-item">LangFuse monitoring</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <!-- RadAgent Paper -->
+        <div class="card" onclick="openModal('radagent')" style="cursor: pointer;">
+          <div class="card-tag">Healthcare AI</div><span class="card-badge">Research</span>
+          <h3>RadAgent</h3>
+          <p><strong>Hallucination-resistant multi-agent copilot</strong> for real-time radiology dictation with HIPAA compliance and 94.2% clinical accuracy.</p>
+          <div class="card-tech">
+            <span class="tech-badge">LangGraph</span>
+            <span class="tech-badge">Whisper</span>
+            <span class="tech-badge">HIPAA</span>
+            <span class="tech-badge">Docker</span>
+          </div>
+        </div>
+
+        <!-- VERITAS KDSH -->
+        <div class="card" onclick="openModal('veritas')" style="cursor: pointer;">
+          <div class="card-tag">NLP Verification</div><span class="card-badge">1st Prize KDSH</span>
+          <h3>VERITAS</h3>
+          <p><strong>1st Prize Winner</strong> of Kharagpur Data Science Hackathon 2026. Advanced verification engine for intertextual fact-checking with cross-document reasoning.</p>
+          <div class="card-tech">
+            <span class="tech-badge">NLP</span>
+            <span class="tech-badge">Verification</span>
+            <span class="tech-badge">Reasoning</span>
+          </div>
+        </div>
+
+        <!-- ISRO GeoNLI -->
+        <div class="card" onclick="openModal('isro-geomli')" style="cursor: pointer;">
+          <div class="card-tag">Remote Sensing</div><span class="card-badge">Gold Medal</span>
+          <h3>Aksha Drishti</h3>
+          <p><strong>Geospatial NLI platform</strong> for satellite imagery analysis with chat-based interface supporting Optical, Infrared, and SAR data.</p>
+          <div class="card-tech">
+            <span class="tech-badge">vLLM</span>
+            <span class="tech-badge">Qwen3-VL</span>
+            <span class="tech-badge">SAM3</span>
+            <span class="tech-badge">FastAPI</span>
+          </div>
+        </div>
+
+        <!-- AlphaStream -->
+        <div class="card" onclick="openModal('alphastream')" style="cursor: pointer;">
+          <div class="card-tag">FinTech AI</div><span class="card-badge">Production</span>
+          <h3>AlphaStream</h3>
+          <p><strong>Real-time financial intelligence</strong> platform analyzing SEC filings, news, and social data for sub-2-second trading recommendations.</p>
+          <div class="card-tech">
+            <span class="tech-badge">Pathway</span>
+            <span class="tech-badge">CrewAI</span>
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">WebSocket</span>
+          </div>
+        </div>
+
+        <!-- SAM3 Agent -->
+        <div class="card" onclick="openModal('sam3')" style="cursor: pointer;">
+          <div class="card-tag">Computer Vision</div>
+          <h3>SAM3 Agent</h3>
+          <p><strong>Advanced image segmentation</strong> and grounding service for object detection, area measurement, and mask generation on satellite imagery.</p>
+          <div class="card-tech">
+            <span class="tech-badge">SAM3</span>
+            <span class="tech-badge">Docker</span>
+            <span class="tech-badge">Modal</span>
+            <span class="tech-badge">VLM</span>
+          </div>
+        </div>
+
+        <!-- Budget Optimization -->
+        <div class="card" onclick="openModal('budget')" style="cursor: pointer;">
+          <div class="card-tag">Data Analytics</div><span class="card-badge">Bronze Winner</span>
+          <h3>Budget Optimization</h3>
+          <p><strong>Marketing Mix Model</strong> for multi-million dollar budget optimization with 31.9% revenue uplift projection.</p>
+          <div class="card-tech">
+            <span class="tech-badge">Robyn MMM</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Analytics</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Competitions Section -->
+    <section id="achievements">
+      <h2 class="section-title">Competitions and Wins</h2>
+      <div class="competitions-list">
+        <div class="competition-item" onclick="openModal('isro-geomli')" style="cursor: pointer;">
+          <div class="comp-badge">Gold</div>
+          <div class="comp-content">
+            <h3>Inter IIT Tech Meet 14.0</h3>
+            <p><strong>ISRO GeoNLI Challenge, Gold Medal Winner</strong></p>
+            <p class="comp-details">Built state-of-the-art geospatial AI system surpassing GPT-4o on VRSBench with 87% VQA accuracy.</p>
+          </div>
+        </div>
+
+        <div class="competition-item" onclick="openModal('veritas')" style="cursor: pointer;">
+          <div class="comp-badge">1st Prize</div>
+          <div class="comp-content">
+            <h3>Kharagpur Data Science Hackathon 2026</h3>
+            <p><strong>VERITAS, 1st Prize Winner</strong></p>
+            <p class="comp-details">Certificate of Merit for qualifying as finalist with advanced NLP-based verification engine.</p>
+          </div>
+        </div>
+
+        <div class="competition-item" onclick="openModal('budget')" style="cursor: pointer;">
+          <div class="comp-badge">Bronze</div>
+          <div class="comp-content">
+            <h3>Data Analytics General Championship 2025</h3>
+            <p><strong>Budget Optimization Challenge</strong></p>
+            <p class="comp-details">Optimized $18.7M marketing budget using Meta's Robyn MMM for 31.9% revenue uplift.</p>
+          </div>
+        </div>
+
+        <div class="competition-item" onclick="openModal('employee-selection')" style="cursor: pointer;">
+          <div class="comp-badge">Bronze</div>
+          <div class="comp-content">
+            <h3>Open Soft General Championship 2025</h3>
+            <p><strong>Employee Selection Engine</strong></p>
+            <p class="comp-details">Predictive pipeline achieving 87% accuracy in at-risk employee identification using multi-dataset HR analytics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <div class="education-list">
+        <div class="education-item">
+          <h3>Indian Institute of Technology, Kharagpur</h3>
+          <p class="education-degree">B.Tech (Hons.) in Instrumentation Engineering</p>
+          <div class="education-details">
+            <div><strong>CGPA:</strong> 8.54 out of 10 (Current)</div>
+            <div><strong>Duration:</strong> August 2023 to April 2027</div>
+            <div><strong>Minor:</strong> Artificial Intelligence and Computer Science</div>
+            <div><strong>Specialization:</strong> High-Performance Computing</div>
+            <div><strong>Department:</strong> Instrumentation Engineering, IIT Kharagpur</div>
+          </div>
+        </div>
+
+        <div class="education-item">
+          <h3>Delhi Model Public School, Patna</h3>
+          <p class="education-degree">Class XII (Science Stream), AISSCE Board</p>
+          <div class="education-details">
+            <div><strong>Aggregate:</strong> 94.2%</div>
+            <div><strong>Stream:</strong> Science (Physics, Chemistry, Mathematics, Computer Science)</div>
+            <div><strong>Location:</strong> Patna, Bihar, India</div>
+          </div>
+        </div>
+
+        <div class="education-item">
+          <h3>Bishop Scott Boys School, Patna</h3>
+          <p class="education-degree">Class X (AISSE Board)</p>
+          <div class="education-details">
+            <div><strong>Percentage:</strong> 98%</div>
+            <div><strong>Location:</strong> Patna, Bihar, India</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h2 class="section-title">Technical Stack</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Languages</h4>
+          <div class="skill-list">
+            <span class="skill-item">Python</span>
+            <span class="skill-item">JavaScript</span>
+            <span class="skill-item">C++</span>
+            <span class="skill-item">SQL</span>
+            <span class="skill-item">R</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4>AI & ML</h4>
+          <div class="skill-list">
+            <span class="skill-item">LangGraph</span>
+            <span class="skill-item">LangChain</span>
+            <span class="skill-item">PyTorch</span>
+            <span class="skill-item">vLLM</span>
+            <span class="skill-item">HuggingFace</span>
+            <span class="skill-item">OpenCV</span>
+            <span class="skill-item">SAM/SAM3</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4>Web & Backend</h4>
+          <div class="skill-list">
+            <span class="skill-item">React.js</span>
+            <span class="skill-item">FastAPI</span>
+            <span class="skill-item">Node.js</span>
+            <span class="skill-item">PostgreSQL</span>
+            <span class="skill-item">Supabase</span>
+            <span class="skill-item">MongoDB</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4>Tools & Infrastructure</h4>
+          <div class="skill-list">
+            <span class="skill-item">Docker</span>
+            <span class="skill-item">AWS S3</span>
+            <span class="skill-item">Modal</span>
+            <span class="skill-item">Git/GitHub</span>
+            <span class="skill-item">LangFuse</span>
+            <span class="skill-item">LangSmith</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4>Agentic Systems</h4>
+          <div class="skill-list">
+            <span class="skill-item">Multi-Agent Design</span>
+            <span class="skill-item">CrewAI</span>
+            <span class="skill-item">Pathway</span>
+            <span class="skill-item">RAG</span>
+            <span class="skill-item">Prompt Engineering</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h4>Domains</h4>
+          <div class="skill-list">
+            <span class="skill-item">Computer Vision</span>
+            <span class="skill-item">NLP</span>
+            <span class="skill-item">Healthcare AI</span>
+            <span class="skill-item">Remote Sensing</span>
+            <span class="skill-item">FinTech</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV Section -->
+    <section id="cv">
+      <div class="cv-section">
+        <h2>Complete Resume</h2>
+        <p>For detailed work experience, full technical skills, publications, and certifications, download my complete resume.</p>
+        <a href="Animesh_OffCampus_8.54.pdf" class="btn btn-primary" download>Download CV (PDF)</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="social-links">
+        <a href="https://github.com/wildcraft958">GitHub</a>
+        <a href="https://linkedin.com/in/animeshrj958">LinkedIn</a>
+        <a href="mailto:animeshraj958@gmail.com">Email</a>
+      </div>
+      <p>Copyright 2026 Animesh Raj. Built with HTML, CSS, and JavaScript. Hosted on GitHub Pages.</p>
+    </footer>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="detailModal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <h2 class="modal-title"></h2>
+      <div class="modal-detail"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
