@@ -269,14 +269,15 @@ section {
 
 .card-badge {
   display: inline-block;
-  background: rgba(232, 64, 12, 0.15);
-  color: var(--accent);
-  padding: 4px 12px;
-  border-radius: 5px;
+  background: var(--accent);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
   font-size: 11px;
   font-weight: 700;
-  margin-left: 10px;
+  margin-left: 12px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .card-tech {
@@ -478,6 +479,123 @@ section {
   font-size: 16px;
 }
 
+/* Contact Section */
+.contact-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 56px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-section h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.contact-section p {
+  font-size: 16px;
+  color: var(--gray);
+  margin-bottom: 32px;
+  line-height: 1.8;
+}
+
+.contact-methods {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: var(--white);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+  color: var(--accent);
+}
+
+.contact-icon {
+  font-size: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(232, 64, 12, 0.1);
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+}
+
+.contact-method:hover .contact-icon {
+  background: var(--accent);
+  color: white;
+}
+
+.contact-cta {
+  margin-top: 40px;
+}
+
+.open-source-section {
+  margin-bottom: 40px;
+}
+
+.open-source-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--white);
+}
+
+.contribution-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.contribution-item:hover {
+  background: rgba(232, 64, 12, 0.05);
+  border-color: var(--accent);
+}
+
+.contribution-item h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+
+.contribution-item p {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.contribution-link {
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contribution-link:hover {
+  color: var(--white);
+}
+
 /* Footer */
 footer {
   border-top: 1px solid var(--border);
@@ -580,5 +698,26 @@ footer {
 
   .cv-section {
     padding: 40px 28px;
+  }
+
+  .contact-section {
+    padding: 40px 28px;
+  }
+
+  .contact-methods {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-method {
+    justify-content: flex-start;
+  }
+
+  .open-source-section {
+    grid-template-columns: 1fr;
+  }
+
+  .contribution-item {
+    padding: 20px;
   }
 }
