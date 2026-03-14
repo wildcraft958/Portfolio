@@ -170,8 +170,7 @@ section {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 12px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: all 0.3s ease;
   cursor: pointer;
   min-height: 360px;
@@ -179,22 +178,9 @@ section {
   flex-direction: column;
 }
 
-/* Custom Scrollbar */
-.card::-webkit-scrollbar {
-  width: 6px;
-}
-
-.card::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.card::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 3px;
-}
-
-.card::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-dark);
+/* Projects grid - smaller cards for modal view */
+.projects-grid .card {
+  min-height: 320px;
 }
 
 .card:hover {
@@ -210,38 +196,14 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  transition: opacity 0.3s ease;
 }
 
 .card-front {
-  opacity: 1;
-  pointer-events: auto;
+  display: flex;
 }
 
 .card-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  pointer-events: none;
-  background: var(--black3);
-  border-radius: 12px;
-}
-
-.card {
-  position: relative;
-}
-
-.card:hover .card-front {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.card:hover .card-back {
-  opacity: 1;
-  pointer-events: auto;
+  display: none;
 }
 
 .card-company {
@@ -705,6 +667,220 @@ section {
   left: 0;
   color: var(--accent);
   font-weight: bold;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-content {
+  background: var(--black3);
+  border: 1px solid var(--accent);
+  border-radius: 16px;
+  padding: 48px;
+  max-width: 700px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 28px;
+  color: var(--white);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: var(--accent);
+}
+
+.modal-header {
+  margin-bottom: 24px;
+  padding-right: 40px;
+}
+
+.modal-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+  letter-spacing: 0.8px;
+}
+
+.modal-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--white);
+}
+
+.modal-badge {
+  display: inline-block;
+  background: transparent;
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-right: 8px;
+}
+
+.modal-description {
+  font-size: 16px;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.modal-section {
+  margin-bottom: 28px;
+}
+
+.modal-section-title {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+
+.modal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-list li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  font-size: 14px;
+  color: var(--gray-light);
+  line-height: 1.7;
+}
+
+.modal-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.modal-tech {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.modal-tech span {
+  font-size: 12px;
+  background: rgba(232, 64, 12, 0.1);
+  color: var(--accent);
+  padding: 6px 13px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.modal-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.modal-link:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+/* Scrollbar for modal */
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-dark);
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 90%;
+    padding: 32px 24px;
+  }
+
+  .modal-title {
+    font-size: 22px;
+  }
+
+  .modal-description {
+    font-size: 15px;
+  }
 }
 
 /* CV Section */

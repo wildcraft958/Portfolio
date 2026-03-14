@@ -240,7 +240,7 @@
       <h2 class="section-title">Featured Projects</h2>
       <div class="projects-grid">
         <!-- RadAgent Paper -->
-        <div class="card">
+        <div class="card" onclick="openProjectModal('radagent')">
           <div class="card-front">
             <div class="card-tag">Healthcare AI</div><span class="card-badge">Research</span>
             <h3>RadAgent</h3>
@@ -252,22 +252,10 @@
               <span class="tech-badge">Docker</span>
             </div>
           </div>
-          <div class="card-back">
-            <p class="back-title">Research Highlights</p>
-            <ul class="back-list">
-              <li>Multi-agent system for radiologist voice to structured medical reports</li>
-              <li>Dual-track latency architecture: less than 300ms perceived latency</li>
-              <li>94.2% clinical accuracy with hallucination-resistant guardrails</li>
-              <li>100% HIPAA compliance via Microsoft Presidio PHI removal</li>
-              <li>Deployed in hospital infrastructure on standard hardware</li>
-              <li>Published: RadAgent - A Hallucination-Resistant Multi-Agent Copilot</li>
-              <li><a href="https://github.com/wildcraft958/RadAgent" style="color: var(--accent); text-decoration: none;">View Project →</a></li>
-            </ul>
-          </div>
         </div>
 
         <!-- VERITAS KDSH -->
-        <div class="card">
+        <div class="card" onclick="openProjectModal('veritas')">
           <div class="card-front">
             <div class="card-tag">NLP Verification</div><span class="card-badge">1st Prize KDSH</span>
             <h3>VERITAS</h3>
@@ -278,22 +266,10 @@
               <span class="tech-badge">Reasoning</span>
             </div>
           </div>
-          <div class="card-back">
-            <p class="back-title">KDSH 2026 Achievement</p>
-            <ul class="back-list">
-              <li>1st Prize Winner in Kharagpur Data Science Hackathon 2026</li>
-              <li>Advanced NLP-based verification engine for fact-checking and reasoning</li>
-              <li>Cross-document claim reasoning and assertion validation</li>
-              <li>High accuracy on benchmark datasets for claim verification</li>
-              <li>Integrated with RAG for evidence-based fact checking</li>
-              <li>Outperformed competing solutions in both accuracy and innovation</li>
-              <li><a href="https://github.com/wildcraft958/VERITAS_NamoFans_KDSH_2026" style="color: var(--accent); text-decoration: none;">View Project →</a></li>
-            </ul>
-          </div>
         </div>
 
         <!-- ISRO GeoNLI -->
-        <div class="card">
+        <div class="card" onclick="openProjectModal('aksha')">
           <div class="card-front">
             <div class="card-tag">Remote Sensing</div><span class="card-badge">Gold Medal</span>
             <h3>Aksha Drishti</h3>
@@ -305,22 +281,10 @@
               <span class="tech-badge">FastAPI</span>
             </div>
           </div>
-          <div class="card-back">
-            <p class="back-title">Technical Achievements</p>
-            <ul class="back-list">
-              <li>2-3x latency reduction via vLLM with KV caching and concurrent batching</li>
-              <li>87% VQA accuracy on VRSBench (outperformed GPT-4o)</li>
-              <li>0.73 mIoU score with SAM3 Agent grounding service</li>
-              <li>95% GPU utilization through optimized batching</li>
-              <li>Support for Optical, Infrared, and SAR satellite data</li>
-              <li>Inter IIT Tech Meet 14.0 Gold Medal Winner</li>
-              <li><a href="https://github.com/wildcraft958/ISRO_GeoNLI" style="color: var(--accent); text-decoration: none;">View Project →</a></li>
-            </ul>
-          </div>
         </div>
 
         <!-- AlphaStream -->
-        <div class="card">
+        <div class="card" onclick="openProjectModal('alphastream')">
           <div class="card-front">
             <div class="card-tag">FinTech AI</div><span class="card-badge">Production</span>
             <h3>AlphaStream</h3>
@@ -332,22 +296,10 @@
               <span class="tech-badge">WebSocket</span>
             </div>
           </div>
-          <div class="card-back">
-            <p class="back-title">System Architecture</p>
-            <ul class="back-list">
-              <li>Pathway streaming engine for real-time data pipeline</li>
-              <li>Multi-agent reasoning: sentiment, technicals, risk, insider analysis</li>
-              <li>Processes SEC EDGAR, News API, X data in parallel</li>
-              <li>Sub-2-second recommendation turnaround with live updates</li>
-              <li>Bloomberg-style React dashboard with WebSocket broadcasting</li>
-              <li>Adaptive RAG for geometric context expansion</li>
-              <li><a href="https://github.com/wildcraft958/AlphaStream" style="color: var(--accent); text-decoration: none;">View Project →</a></li>
-            </ul>
-          </div>
         </div>
 
         <!-- SAM3 Agent -->
-        <div class="card">
+        <div class="card" onclick="openProjectModal('sam3')">
           <div class="card-front">
             <div class="card-tag">Computer Vision</div>
             <h3>SAM3 Agent</h3>
@@ -359,22 +311,10 @@
               <span class="tech-badge">VLM</span>
             </div>
           </div>
-          <div class="card-back">
-            <p class="back-title">Production Capabilities</p>
-            <ul class="back-list">
-              <li>Object counting and area measurement with high precision</li>
-              <li>Full image segmentation with detailed masks</li>
-              <li>Oriented Bounding Box (OBB) detection</li>
-              <li>VLM-verified results: 40-50% false positive reduction</li>
-              <li>Efficient tiling and pyramidal processing for large images</li>
-              <li>Warm container deployment: sub-second response times</li>
-              <li><a href="https://github.com/wildcraft958/SAM3Agent" style="color: var(--accent); text-decoration: none;">View Project →</a></li>
-            </ul>
-          </div>
         </div>
 
         <!-- Budget Optimization -->
-        <div class="card">
+        <div class="card" onclick="openProjectModal('budget')">
           <div class="card-front">
             <div class="card-tag">Data Analytics</div><span class="card-badge">Bronze Winner</span>
             <h3>Budget Optimization</h3>
@@ -384,18 +324,6 @@
               <span class="tech-badge">Python</span>
               <span class="tech-badge">Analytics</span>
             </div>
-          </div>
-          <div class="card-back">
-            <p class="back-title">Data Analytics GC 2025</p>
-            <ul class="back-list">
-              <li>Meta Robyn library for Marketing Mix Modeling</li>
-              <li>$18.7M annual marketing budget optimization</li>
-              <li>31.9% projected revenue uplift from reallocation</li>
-              <li>Channel-wise budget recommendation framework</li>
-              <li>Response decomposition waterfall analysis</li>
-              <li>Bronze winning team, IIT Kharagpur</li>
-              <li><a href="https://github.com/wildcraft958/GC-DA-25" style="color: var(--accent); text-decoration: none;">View Project →</a></li>
-            </ul>
           </div>
         </div>
       </div>
@@ -796,6 +724,203 @@
       </div>
       <p>Copyright 2026 Animesh Raj. Built with HTML, CSS, and JavaScript. Hosted on GitHub Pages.</p>
     </footer>
+  </div>
+
+  <!-- Project Modals -->
+  <div id="radagent-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeProjectModal('radagent')">&times;</button>
+      <div class="modal-header">
+        <div class="modal-tag">Healthcare AI</div>
+        <span class="modal-badge">Research</span>
+        <h2 class="modal-title">RadAgent</h2>
+        <p class="modal-description">Hallucination-resistant multi-agent copilot for real-time radiology dictation with HIPAA compliance and 94.2% clinical accuracy.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Research Highlights</div>
+        <ul class="modal-list">
+          <li>Multi-agent system for radiologist voice to structured medical reports</li>
+          <li>Dual-track latency architecture: less than 300ms perceived latency</li>
+          <li>94.2% clinical accuracy with hallucination-resistant guardrails</li>
+          <li>100% HIPAA compliance via Microsoft Presidio PHI removal</li>
+          <li>Deployed in hospital infrastructure on standard hardware</li>
+          <li>Published: RadAgent - A Hallucination-Resistant Multi-Agent Copilot</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Technologies</div>
+        <div class="modal-tech">
+          <span>LangGraph</span>
+          <span>Whisper</span>
+          <span>HIPAA</span>
+          <span>Docker</span>
+        </div>
+      </div>
+      <a href="https://github.com/wildcraft958/RadAgent" class="modal-link">View Project →</a>
+    </div>
+  </div>
+
+  <div id="veritas-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeProjectModal('veritas')">&times;</button>
+      <div class="modal-header">
+        <div class="modal-tag">NLP Verification</div>
+        <span class="modal-badge">1st Prize KDSH</span>
+        <h2 class="modal-title">VERITAS</h2>
+        <p class="modal-description">1st Prize Winner of Kharagpur Data Science Hackathon 2026. Advanced verification engine for intertextual fact-checking.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">KDSH 2026 Achievement</div>
+        <ul class="modal-list">
+          <li>1st Prize Winner in Kharagpur Data Science Hackathon 2026</li>
+          <li>Advanced NLP-based verification engine for fact-checking and reasoning</li>
+          <li>Cross-document claim reasoning and assertion validation</li>
+          <li>High accuracy on benchmark datasets for claim verification</li>
+          <li>Integrated with RAG for evidence-based fact checking</li>
+          <li>Outperformed competing solutions in both accuracy and innovation</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Technologies</div>
+        <div class="modal-tech">
+          <span>NLP</span>
+          <span>Verification</span>
+          <span>Reasoning</span>
+          <span>RAG</span>
+        </div>
+      </div>
+      <a href="https://github.com/wildcraft958/VERITAS_NamoFans_KDSH_2026" class="modal-link">View Repository →</a>
+    </div>
+  </div>
+
+  <div id="aksha-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeProjectModal('aksha')">&times;</button>
+      <div class="modal-header">
+        <div class="modal-tag">Remote Sensing</div>
+        <span class="modal-badge">Gold Medal</span>
+        <h2 class="modal-title">Aksha Drishti</h2>
+        <p class="modal-description">Geospatial NLI platform for satellite imagery analysis with chat-based interface supporting Optical, Infrared, and SAR data.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Technical Achievements</div>
+        <ul class="modal-list">
+          <li>2-3x latency reduction via vLLM with KV caching and concurrent batching</li>
+          <li>87% VQA accuracy on VRSBench (outperformed GPT-4o)</li>
+          <li>0.73 mIoU score with SAM3 Agent grounding service</li>
+          <li>95% GPU utilization through optimized batching</li>
+          <li>Support for Optical, Infrared, and SAR satellite data</li>
+          <li>Inter IIT Tech Meet 14.0 Gold Medal Winner</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Technologies</div>
+        <div class="modal-tech">
+          <span>vLLM</span>
+          <span>Qwen3-VL</span>
+          <span>SAM3</span>
+          <span>FastAPI</span>
+        </div>
+      </div>
+      <a href="https://github.com/wildcraft958/ISRO_GeoNLI" class="modal-link">View Project →</a>
+    </div>
+  </div>
+
+  <div id="alphastream-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeProjectModal('alphastream')">&times;</button>
+      <div class="modal-header">
+        <div class="modal-tag">FinTech AI</div>
+        <span class="modal-badge">Production</span>
+        <h2 class="modal-title">AlphaStream</h2>
+        <p class="modal-description">Real-time financial intelligence platform analyzing SEC filings, news, and social data for sub-2-second trading recommendations.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">System Architecture</div>
+        <ul class="modal-list">
+          <li>Pathway streaming engine for real-time data pipeline</li>
+          <li>Multi-agent reasoning: sentiment, technicals, risk, insider analysis</li>
+          <li>Processes SEC EDGAR, News API, X data in parallel</li>
+          <li>Sub-2-second recommendation turnaround with live updates</li>
+          <li>Bloomberg-style React dashboard with WebSocket broadcasting</li>
+          <li>Adaptive RAG for geometric context expansion</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Technologies</div>
+        <div class="modal-tech">
+          <span>Pathway</span>
+          <span>CrewAI</span>
+          <span>React</span>
+          <span>WebSocket</span>
+        </div>
+      </div>
+      <a href="https://github.com/wildcraft958/AlphaStream" class="modal-link">View Project →</a>
+    </div>
+  </div>
+
+  <div id="sam3-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeProjectModal('sam3')">&times;</button>
+      <div class="modal-header">
+        <div class="modal-tag">Computer Vision</div>
+        <h2 class="modal-title">SAM3 Agent</h2>
+        <p class="modal-description">Advanced image segmentation and grounding service for object detection, area measurement, and mask generation on satellite imagery.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Production Capabilities</div>
+        <ul class="modal-list">
+          <li>Object counting and area measurement with high precision</li>
+          <li>Full image segmentation with detailed masks</li>
+          <li>Oriented Bounding Box (OBB) detection</li>
+          <li>VLM-verified results: 40-50% false positive reduction</li>
+          <li>Efficient tiling and pyramidal processing for large images</li>
+          <li>Warm container deployment: sub-second response times</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Technologies</div>
+        <div class="modal-tech">
+          <span>SAM3</span>
+          <span>Docker</span>
+          <span>Modal</span>
+          <span>VLM</span>
+        </div>
+      </div>
+      <a href="https://github.com/wildcraft958/SAM3Agent" class="modal-link">View Project →</a>
+    </div>
+  </div>
+
+  <div id="budget-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeProjectModal('budget')">&times;</button>
+      <div class="modal-header">
+        <div class="modal-tag">Data Analytics</div>
+        <span class="modal-badge">Bronze Winner</span>
+        <h2 class="modal-title">Budget Optimization</h2>
+        <p class="modal-description">Marketing Mix Model for multi-million dollar budget optimization with 31.9% revenue uplift projection.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Data Analytics GC 2025</div>
+        <ul class="modal-list">
+          <li>Meta Robyn library for Marketing Mix Modeling</li>
+          <li>$18.7M annual marketing budget optimization</li>
+          <li>31.9% projected revenue uplift from reallocation</li>
+          <li>Channel-wise budget recommendation framework</li>
+          <li>Response decomposition waterfall analysis</li>
+          <li>Bronze winning team, IIT Kharagpur</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Technologies</div>
+        <div class="modal-tech">
+          <span>Robyn MMM</span>
+          <span>Python</span>
+          <span>Analytics</span>
+        </div>
+      </div>
+      <a href="https://github.com/wildcraft958/GC-DA-25" class="modal-link">View Solution →</a>
+    </div>
   </div>
 
   <script src="js/script.js"></script>
