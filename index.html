@@ -46,7 +46,7 @@
       <h2 class="section-title">Professional Experience</h2>
       <div class="internships-grid">
         <!-- Suzuki R&D -->
-        <div class="card">
+        <div class="card flip-card">
           <div class="card-front">
             <div class="card-company">🏢 Suzuki R&D Center</div>
             <h3>R&D Intern</h3>
@@ -70,7 +70,7 @@
         </div>
 
         <!-- Inter IIT GeoNLI -->
-        <div class="card">
+        <div class="card flip-card">
           <div class="card-front">
             <div class="card-company">🎖️ Inter IIT Tech Meet 14.0</div>
             <h3>Applied AI Research Engineer</h3>
@@ -96,7 +96,7 @@
         </div>
 
         <!-- Stealth Startup -->
-        <div class="card">
+        <div class="card flip-card">
           <div class="card-front">
             <div class="card-company">🚀 Stealth AI Startup</div>
             <h3>Software Engineer (R&D)</h3>
@@ -122,7 +122,7 @@
         </div>
 
         <!-- Convosight -->
-        <div class="card">
+        <div class="card flip-card">
           <div class="card-front">
             <div class="card-company">📊 Convosight Analytics</div>
             <h3>Software Engineering Intern</h3>
@@ -148,7 +148,7 @@
         </div>
 
         <!-- Google Student Ambassador -->
-        <div class="card">
+        <div class="card flip-card">
           <div class="card-front">
             <div class="card-company">🌐 Google</div>
             <h3>Student Ambassador</h3>
@@ -175,7 +175,7 @@
         </div>
 
         <!-- Aristhrottle -->
-        <div class="card">
+        <div class="card flip-card">
           <div class="card-front">
             <div class="card-company">🎨 Aristhrottle</div>
             <h3>AI/ML Engineer</h3>
@@ -207,42 +207,17 @@
       <h2 class="section-title">Currently Working On</h2>
       <div class="projects-grid">
         <!-- AgentGuard -->
-        <div class="card">
+        <div class="card" onclick="openProjectModal('agentguard')">
           <div class="card-front">
             <div class="card-tag">Enterprise AI Security</div><span class="card-badge">Active</span>
             <h3>AgentGuard</h3>
-            <p><strong>Multi-Agent Security & Governance Platform</strong> for enterprise AI teams. Guardian middleware that validates every agent action before execution.</p>
+            <p><strong>Multi-Agent Security &amp; Governance Platform</strong> for enterprise AI teams. Guardian middleware that validates every agent action before execution.</p>
             <div class="card-tech">
               <span class="tech-badge">LangGraph</span>
               <span class="tech-badge">LLM-as-Judge</span>
               <span class="tech-badge">RBAC</span>
               <span class="tech-badge">Azure</span>
             </div>
-          </div>
-          <div class="card-back">
-            <p class="back-title">Architecture & Impact</p>
-            <ul class="back-list">
-              <li>4-layer defense-in-depth: L1 input validation, L2 output filters, L3 tool firewall, L4 RBAC/behavioral</li>
-              <li>Defends against OWASP Agentic AI Top 10: prompt injection, excessive agency, memory poisoning, insecure tool use</li>
-              <li>Tool Firewall with 5 guardrails: entity recognition, indirect PI detection, rule-based constraints, argument validation, HITL approval</li>
-              <li>LLM-as-judge hallucination detection + groundedness verification</li>
-              <li>Open-source safety LLM candidates: Llama Guard 3, ShieldGemma, WildGuard, Granite Guardian</li>
-              <li>Live dashboard at agentguard.exempl4r.xyz with real-time OTel traces</li>
-              <li><a href="https://github.com/wildcraft958/AgentGuard_NamoFans" style="color: var(--accent); text-decoration: none;">View Project →</a></li>
-            </ul>
-          </div>
-        </div>
-          <div class="card-back">
-            <p class="back-title">Architecture & Impact</p>
-            <ul class="back-list">
-              <li>4-layer defense-in-depth: L1 input validation, L2 output filters, L3 tool firewall, L4 RBAC/behavioral</li>
-              <li>Defends against OWASP Agentic AI Top 10: prompt injection, excessive agency, memory poisoning, insecure tool use</li>
-              <li>Tool Firewall with 5 guardrails: entity recognition, indirect PI detection, rule-based constraints, argument validation, HITL approval</li>
-              <li>LLM-as-judge hallucination detection + groundedness verification</li>
-              <li>Open-source safety LLM candidates: Llama Guard 3, ShieldGemma, WildGuard, Granite Guardian</li>
-              <li>Live dashboard at agentguard.exempl4r.xyz with real-time OTel traces</li>
-              <li><a href="https://github.com/wildcraft958/AgentGuard_NamoFans" style="color: var(--accent); text-decoration: none;">View Project →</a></li>
-            </ul>
           </div>
         </div>
       </div>
@@ -770,6 +745,43 @@
         </div>
       </div>
       <a href="https://github.com/wildcraft958/RadAgent" class="modal-link">View Project →</a>
+    </div>
+  </div>
+
+  <div id="agentguard-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeProjectModal('agentguard')">&times;</button>
+      <div class="modal-header">
+        <div class="modal-tag">Enterprise AI Security</div>
+        <span class="modal-badge">Active</span>
+        <h2 class="modal-title">AgentGuard</h2>
+        <p class="modal-description">Multi-Agent Security &amp; Governance Platform for enterprise AI teams. Guardian middleware that sits between AI agents and their actions, intercepting and validating every operation before execution.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">4-Layer Defense Architecture</div>
+        <ul class="modal-list">
+          <li>L1 Input: Prompt injection detection (33-regex pre-filter + Azure Prompt Shields), harmful content filters, custom blocklists</li>
+          <li>L2 Output: PII detection, toxicity filtering, LLM-as-judge hallucination and groundedness check</li>
+          <li>L3 Tool Firewall: Entity recognition on tool args, contrastive indirect PI detection (MELON), 5 argument-aware guardrails, HITL/AITL approval gate</li>
+          <li>L4 RBAC + Behavioral: ABAC engine with ALLOW/DENY/ELEVATE, 5-signal anomaly detector (Z-score, Levenshtein, read-exfil chain, domain, entropy)</li>
+          <li>Covers OWASP Agentic AI Top 10: prompt injection, excessive agency, memory poisoning, insecure tool use, data exfiltration</li>
+          <li>Live dashboard with real-time OTel trace stream and audit log</li>
+        </ul>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Technologies</div>
+        <div class="modal-tech">
+          <span>LangGraph</span>
+          <span>LLM-as-Judge</span>
+          <span>Azure AI</span>
+          <span>RBAC</span>
+          <span>OpenTelemetry</span>
+          <span>SQLite</span>
+          <span>DeepTeam</span>
+          <span>Promptfoo</span>
+        </div>
+      </div>
+      <a href="https://github.com/wildcraft958/AgentGuard_NamoFans" class="modal-link">View Project →</a>
     </div>
   </div>
 

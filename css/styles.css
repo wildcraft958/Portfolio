@@ -220,12 +220,13 @@ section {
   position: relative;
 }
 
-.card:hover .card-front {
+/* Only flip-card class gets the hover-flip behavior */
+.flip-card:hover .card-front {
   opacity: 0;
   pointer-events: none;
 }
 
-.card:hover .card-back {
+.flip-card:hover .card-back {
   opacity: 1;
   pointer-events: auto;
 }
