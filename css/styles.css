@@ -196,14 +196,38 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  transition: opacity 0.3s ease;
 }
 
 .card-front {
-  display: flex;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .card-back {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  background: var(--black3);
+  border-radius: 12px;
+}
+
+.card {
+  position: relative;
+}
+
+.card:hover .card-front {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card:hover .card-back {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .card-company {
