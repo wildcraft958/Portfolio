@@ -183,6 +183,24 @@ section {
   min-height: 320px;
 }
 
+/* Modal trigger indicator */
+.card[onclick]::after {
+  content: '↗';
+  position: absolute;
+  bottom: 16px;
+  right: 18px;
+  font-size: 14px;
+  color: var(--accent);
+  opacity: 0.4;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.card[onclick]:hover::after {
+  opacity: 1;
+  transform: translate(2px, -2px);
+}
+
 .card:hover {
   background: rgba(248,245,240,0.05);
   border-color: var(--accent);
