@@ -191,19 +191,38 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  transition: opacity 0.3s ease;
+}
+
+.card-front {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .card-back {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
   background: var(--black3);
+  border-radius: 12px;
+}
+
+.card {
+  position: relative;
 }
 
 .card:hover .card-front {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .card:hover .card-back {
-  display: flex;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .card-company {
@@ -593,6 +612,82 @@ section {
   font-weight: 600;
 }
 
+/* Activities Grid */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+.activity-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 28px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.activity-item:hover {
+  background: rgba(248,245,240,0.05);
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.activity-item h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0;
+}
+
+.activity-badge {
+  display: inline-block;
+  background: rgba(232, 64, 12, 0.15);
+  color: var(--accent);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activity-list li {
+  font-size: 14px;
+  color: var(--gray-light);
+  line-height: 1.7;
+  margin-bottom: 10px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.activity-list li:last-child {
+  margin-bottom: 0;
+}
+
+.activity-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
 /* CV Section */
 .cv-section {
   background: var(--bg-card);
@@ -862,5 +957,23 @@ footer {
 
   .initiative-card {
     padding: 28px;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .activity-item {
+    padding: 24px;
+  }
+
+  .activity-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .activity-item h3 {
+    font-size: 16px;
   }
 }
