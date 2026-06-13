@@ -84,7 +84,7 @@
       <div class="sec-head">
         <div class="sec-label">Experience</div>
         <h2 class="sec-title">Where I've shipped</h2>
-        <p class="sec-sub">An automotive R&amp;D center, a voice-AI startup, and analytics teams - building AI that has to work in production, not just in a notebook.</p>
+        <p class="sec-sub">An automotive R&amp;D center, a foreign research lab, a voice-AI startup, and analytics teams - building AI that has to work in production, not just in a notebook.</p>
       </div>
 
       <div class="grid grid-2">
@@ -104,6 +104,23 @@
             <li>Authored and delivered a 50-slide "Intro to LLMs" course, training the entire R&amp;D team on AI.</li>
           </ul>
           <div class="tags"><span class="tag">RAG</span><span class="tag">FAISS</span><span class="tag">FastAPI</span><span class="tag">Reranking</span><span class="tag">llama.cpp</span><span class="tag">Docker</span></div>
+        </div>
+
+        <!-- Smart Meter (FTP - IR Cell, IIT KGP) -->
+        <div class="card exp-card reveal">
+          <div class="exp-top">
+            <span class="exp-company">MicroDERLab · UPB Bucharest</span>
+            <span class="exp-date">May - Jul 2026</span>
+          </div>
+          <div class="badge-row"><h3>Research Intern - Smart Meter Analytics</h3><span class="badge">FTP · IIT KGP</span></div>
+          <p class="card-desc">A summer research internship at Politehnica University of Bucharest, secured through IIT Kharagpur's <strong>Foreign Training Programme (IR Cell)</strong> under Prof. Grigore Stamatescu - anomaly detection and NILM on 1-second smart-meter data.</p>
+          <ul class="bullets">
+            <li>Built a 15-detector dual-validation benchmark (Matrix Profile, IsolationForest, LOF, OCSVM, ECOD, COPOD, HBOS, AutoEncoder + CWT) over 20.9M+ samples.</li>
+            <li>Key finding: synthetic injection benchmarks overstate unsupervised anomaly detection; on real labels, only a variance filter and ECOD beat the base rate.</li>
+            <li>CWT time-frequency features add orthogonal value on shape and dropout anomalies that learned detectors miss.</li>
+            <li>Trained a Seq2Point CNN for load disaggregation on a real synchronous sub-meter pair.</li>
+          </ul>
+          <div class="tags"><span class="tag">PyTorch</span><span class="tag">stumpy</span><span class="tag">PyOD</span><span class="tag">PyWavelets</span><span class="tag">Time Series</span></div>
         </div>
 
         <!-- VoiceEval -->
@@ -215,12 +232,12 @@
           <div class="tags"><span class="tag">React 19</span><span class="tag">LangGraph</span><span class="tag">Vertex AI</span><span class="tag">Cloud Run</span></div>
         </div>
 
-        <div class="card clickable reveal" onclick="openProjectModal('smartmeter')">
-          <div class="icon-tile">⚡</div>
-          <div class="badge-row"><span class="card-eyebrow">Energy · Time Series</span><span class="badge">Research</span></div>
-          <h3>Smart Meter Analytics</h3>
-          <p class="card-desc">Anomaly detection and NILM on 1-second smart-meter data at MicroDERLab (UPB, via IIT KGP FTP 9.0) - a rigorous benchmark separating real signal from synthetic-label illusions.</p>
-          <div class="tags"><span class="tag">PyTorch</span><span class="tag">stumpy</span><span class="tag">PyOD</span><span class="tag">CWT</span></div>
+        <div class="card clickable reveal" onclick="openProjectModal('veritas')">
+          <div class="icon-tile">✅</div>
+          <div class="badge-row"><span class="card-eyebrow">NLP · RAG</span><span class="badge solid">KDSH 6.0 · 1st</span></div>
+          <h3>VERITAS</h3>
+          <p class="card-desc">A 5-layer hallucination-free RAG pipeline verifying 100k-word narratives end-to-end. 1st Prize at the Kharagpur Data Science Hackathon 6.0 (13,500+ registrations).</p>
+          <div class="tags"><span class="tag">LangGraph</span><span class="tag">HippoRAG</span><span class="tag">RAPTOR</span><span class="tag">Pathway</span></div>
         </div>
 
         <div class="card clickable reveal" onclick="openProjectModal('instigpt')">
@@ -282,6 +299,7 @@
         <div class="card reveal">
           <div class="badge-row"><span class="badge solid">1st Prize</span><h3 style="margin:0">KDSH 6.0 (VERITAS)</h3></div>
           <p class="card-desc">1st place out of 13,500+ registrations with VERITAS, a 5-layer hallucination-free RAG pipeline verifying 100k-word narratives end-to-end via LangGraph (FActScore 91% precision).</p>
+          <a href="https://github.com/wildcraft958/VERITAS_NamoFans_KDSH_2026" class="card-link">View Repository →</a>
         </div>
         <div class="card reveal">
           <div class="badge-row"><span class="badge solid">1st Prize</span><h3 style="margin:0">NSCIF 2026 (AgroWise)</h3></div>
@@ -563,27 +581,28 @@
     </div>
   </div>
 
-  <div id="smartmeter-modal" class="modal">
+  <div id="veritas-modal" class="modal">
     <div class="modal-content">
-      <button class="modal-close" onclick="closeProjectModal('smartmeter')">&times;</button>
+      <button class="modal-close" onclick="closeProjectModal('veritas')">&times;</button>
       <div class="modal-header">
-        <div class="badge-row"><span class="card-eyebrow">Energy · Time Series</span><span class="badge">Research</span></div>
-        <h2 class="modal-title">Smart Meter Data Analytics</h2>
-        <p class="modal-desc">Research at MicroDERLab (Politehnica University of Bucharest, via IIT Kharagpur FTP 9.0) on anomaly detection and NILM over 1-second residential smart-meter data, under Prof. Grigore Stamatescu.</p>
+        <div class="badge-row"><span class="card-eyebrow">NLP · Verification</span><span class="badge solid">1st Prize · KDSH 6.0</span></div>
+        <h2 class="modal-title">VERITAS</h2>
+        <p class="modal-desc">A hallucination-free RAG pipeline that verifies 100k-word narratives end-to-end. Winner of the Kharagpur Data Science Hackathon 6.0 (13,500+ registrations, Pathway-sponsored).</p>
       </div>
       <div class="modal-section">
         <div class="modal-section-title">Highlights</div>
         <ul class="modal-list">
-          <li>15-detector dual-validation benchmark (Matrix Profile, IsolationForest, LOF, OCSVM, ECOD, COPOD, HBOS, AutoEncoder + CWT features) over 20.9M+ samples.</li>
-          <li>Key finding: synthetic injection benchmarks overstate unsupervised AD - on real labels, only a variance filter and ECOD beat the base rate.</li>
-          <li>CWT time-frequency features add genuine orthogonal value on shape and dropout anomalies that learned detectors miss.</li>
-          <li>Trained a Seq2Point CNN for load disaggregation on a real synchronous sub-meter pair.</li>
+          <li>5-layer constraint pipeline verifying 100k-word narratives end-to-end via LangGraph orchestration.</li>
+          <li>Evidence Ledger tracking missing facts via FActScore extraction: 91% precision, 83% accuracy.</li>
+          <li>HippoRAG graphs and RAPTOR tree retrieval over Pathway indexing to structurally eliminate hallucinations.</li>
+          <li>Launched on Modal serverless GPU; end-to-end eval latency under 4s per 100k-word narrative.</li>
         </ul>
       </div>
       <div class="modal-section">
         <div class="modal-section-title">Stack</div>
-        <div class="modal-tech"><span>Python</span><span>PyTorch</span><span>stumpy</span><span>PyOD</span><span>PyWavelets</span></div>
+        <div class="modal-tech"><span>LangGraph</span><span>HippoRAG</span><span>RAPTOR</span><span>Pathway</span><span>Modal</span></div>
       </div>
+      <a href="https://github.com/wildcraft958/VERITAS_NamoFans_KDSH_2026" class="modal-link">View Repository →</a>
     </div>
   </div>
 

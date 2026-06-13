@@ -456,6 +456,17 @@ section { scroll-margin-top: 84px; }
 .exp-date { font-size: 13px; color: var(--gray); font-weight: 500; white-space: nowrap; }
 
 /* ── Research / publication ──────────────────────────────── */
+.card-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.card-link:hover { color: var(--white); }
+
 .pub-card { border-left: 2px solid var(--accent); }
 .pub-venue {
   font-size: 12.5px;
