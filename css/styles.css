@@ -161,17 +161,17 @@ section { scroll-margin-top: 84px; }
 }
 
 .hero-avatar {
-  width: 172px;
-  height: 172px;
-  border-radius: 26px;
+  width: 208px;
+  height: 208px;
+  border-radius: 30px;
   object-fit: cover;
   border: 3px solid var(--accent);
-  box-shadow: 0 16px 48px rgba(232, 64, 12, 0.32), 0 0 0 6px rgba(232, 64, 12, 0.08);
-  margin-bottom: 30px;
+  box-shadow: 0 18px 52px rgba(232, 64, 12, 0.34), 0 0 0 7px rgba(232, 64, 12, 0.08);
+  margin-bottom: 32px;
 }
 
 @media (max-width: 720px) {
-  .hero-avatar { width: 140px; height: 140px; border-radius: 22px; }
+  .hero-avatar { width: 160px; height: 160px; border-radius: 24px; }
 }
 
 .eyebrow {
@@ -346,6 +346,54 @@ section { scroll-margin-top: 84px; }
 }
 .stat-label { font-size: 12.5px; color: var(--gray); line-height: 1.4; }
 
+/* ── Honors band ─────────────────────────────────────────── */
+.honors-band { max-width: var(--maxw); margin: 0 auto 120px; }
+.honors-eyebrow {
+  text-align: center;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.creds {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  justify-content: center; margin-bottom: 20px;
+}
+.cred {
+  font-size: 13px; color: var(--gray);
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 999px; padding: 8px 16px;
+}
+.cred b { color: var(--accent); font-weight: 700; }
+.awards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(246px, 1fr));
+  gap: 10px;
+}
+.award {
+  display: flex; align-items: center; gap: 9px;
+  font-size: 13px; color: var(--gray-light);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--border-strong);
+  border-radius: 8px; padding: 11px 15px;
+  transition: all 0.2s ease;
+}
+.award:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(232, 64, 12, 0.3);
+  transform: translateY(-2px);
+}
+.award b { color: var(--white); font-weight: 700; white-space: nowrap; }
+.award.win { border-left-color: var(--accent); }
+.award.win b { color: var(--accent); }
+
+@media (max-width: 720px) {
+  .awards { grid-template-columns: 1fr; }
+}
+
 /* ── Section header ──────────────────────────────────────── */
 .sec { margin-bottom: 120px; }
 .sec-head { text-align: center; margin-bottom: 56px; }
@@ -460,6 +508,9 @@ section { scroll-margin-top: 84px; }
 .badge.solid { background: var(--accent); color: #fff; border-color: var(--accent); }
 .badge.nda { color: var(--gray); border-color: var(--border-strong); }
 .badge-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 14px; }
+.badge-row .card-eyebrow,
+.badge-row h3 { margin-bottom: 0; }
+.badge-row .badge { vertical-align: baseline; }
 
 /* Bullet lists inside cards */
 .bullets { list-style: none; margin: 6px 0 0; padding: 0; }
