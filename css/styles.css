@@ -161,17 +161,17 @@ section { scroll-margin-top: 84px; }
 }
 
 .hero-avatar {
-  width: 208px;
-  height: 208px;
-  border-radius: 30px;
+  width: 256px;
+  height: 256px;
+  border-radius: 34px;
   object-fit: cover;
   border: 3px solid var(--accent);
-  box-shadow: 0 18px 52px rgba(232, 64, 12, 0.34), 0 0 0 7px rgba(232, 64, 12, 0.08);
-  margin-bottom: 32px;
+  box-shadow: 0 20px 56px rgba(232, 64, 12, 0.36), 0 0 0 8px rgba(232, 64, 12, 0.08);
+  margin-bottom: 34px;
 }
 
 @media (max-width: 720px) {
-  .hero-avatar { width: 160px; height: 160px; border-radius: 24px; }
+  .hero-avatar { width: 188px; height: 188px; border-radius: 26px; }
 }
 
 .eyebrow {
@@ -255,7 +255,7 @@ section { scroll-margin-top: 84px; }
 }
 
 /* ── Honors band ─────────────────────────────────────────── */
-.honors-band { max-width: var(--maxw); margin: 0 auto 120px; }
+.honors-band { max-width: 1320px; margin: 0 auto 120px; padding: 0 28px; }
 .honors-eyebrow {
   text-align: center;
   color: var(--accent);
@@ -277,8 +277,8 @@ section { scroll-margin-top: 84px; }
 .cred b { color: var(--accent); font-weight: 700; }
 .awards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(246px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 12px;
 }
 .award {
   display: flex; align-items: center; gap: 9px;
