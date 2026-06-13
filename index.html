@@ -54,27 +54,6 @@
     </div>
   </header>
 
-  <!-- ── Code window ─────────────────────────────────────── -->
-  <div class="code-wrap">
-    <div class="code-window">
-      <div class="code-head">
-        <span class="code-dot" style="background:#ff5f56"></span>
-        <span class="code-dot" style="background:#ffbd2e"></span>
-        <span class="code-dot" style="background:#27c93f"></span>
-        <span class="code-title">grounded_rag.py</span>
-      </div>
-      <div class="code-body">
-        <div class="code-line"><span class="ln">1</span><span class="ct"><span class="tok-kw">async def</span> <span class="tok-fn">answer</span>(query, k=<span class="tok-num">8</span>):</span></div>
-        <div class="code-line"><span class="ln">2</span><span class="ct">    hits   = <span class="tok-fn">hybrid_retrieve</span>(query, fts5, faiss, k)</span></div>
-        <div class="code-line"><span class="ln">3</span><span class="ct">    ranked = reranker.<span class="tok-fn">rerank</span>(query, hits, fuse=<span class="tok-str">"rrf"</span>)</span></div>
-        <div class="code-line"><span class="ln">4</span><span class="ct">    draft  = vlm.<span class="tok-fn">generate</span>(query, ranked, align=<span class="tok-str">"dpo"</span>)</span></div>
-        <div class="code-line"><span class="ln">5</span><span class="ct">    <span class="tok-kw">if</span> judge.<span class="tok-fn">groundedness</span>(draft, ranked) &lt; <span class="tok-num">0.82</span>:</span></div>
-        <div class="code-line"><span class="ln">6</span><span class="ct">        <span class="tok-kw">return</span> <span class="tok-fn">escalate</span>(query)        <span class="tok-cm"># hallucination guard</span></span></div>
-        <div class="code-line"><span class="ln">7</span><span class="ct">    <span class="tok-kw">return</span> <span class="tok-fn">Answer</span>(text=draft, evidence=ranked[:<span class="tok-num">3</span>])<span class="cursor"></span></span></div>
-      </div>
-    </div>
-  </div>
-
   <!-- ── Stats ───────────────────────────────────────────── -->
   <div class="stats reveal">
     <div class="stat"><div class="stat-val">7.73/10</div><div class="stat-label">CGPA · IIT Kharagpur</div></div>
